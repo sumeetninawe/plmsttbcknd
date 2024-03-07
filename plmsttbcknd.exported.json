@@ -1,0 +1,185 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2024-03-04T22:04:09.640236+01:00",
+            "magic": "f0e288dbf7caeeb8f211840d47f2fa9a7094ecb4a2fd27fb5926e19ee98ccb34",
+            "version": "v3.91.0"
+        },
+        "secrets_providers": {
+            "type": "passphrase",
+            "state": {
+                "salt": "v1:MlJuHq9qtMI=:v1:DwoOoQPAlVTVNMw6:bpyNWIW7CR0IuESuElSLEb7SNzTOaQ=="
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:plmsttbcknd::plmsttbcknd::pulumi:pulumi:Stack::plmsttbcknd-plmsttbcknd",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "publicDns": "ec2-3-123-253-73.eu-central-1.compute.amazonaws.com",
+                    "publicIp": "3.123.253.73"
+                },
+                "created": "2024-03-04T21:03:34.965155Z",
+                "modified": "2024-03-04T21:03:34.965155Z",
+                "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#36,23"
+            },
+            {
+                "urn": "urn:pulumi:plmsttbcknd::plmsttbcknd::pulumi:providers:aws::default_6_24_1",
+                "custom": true,
+                "id": "eb3b06f2-68ef-4743-8c45-2aea4faff391",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "region": "eu-central-1",
+                    "skipCredentialsValidation": "false",
+                    "skipMetadataApiCheck": "true",
+                    "skipRegionValidation": "true",
+                    "version": "6.24.1"
+                },
+                "outputs": {
+                    "region": "eu-central-1",
+                    "skipCredentialsValidation": "false",
+                    "skipMetadataApiCheck": "true",
+                    "skipRegionValidation": "true",
+                    "version": "6.24.1"
+                },
+                "created": "2024-03-04T21:03:36.268805Z",
+                "modified": "2024-03-04T21:03:36.268805Z"
+            },
+            {
+                "urn": "urn:pulumi:plmsttbcknd::plmsttbcknd::aws:ec2/instance:Instance::myEC2Instance",
+                "custom": true,
+                "id": "i-09fd522b2ba9a617e",
+                "type": "aws:ec2/instance:Instance",
+                "inputs": {
+                    "__defaults": [
+                        "getPasswordData",
+                        "sourceDestCheck",
+                        "userDataReplaceOnChange"
+                    ],
+                    "ami": "ami-04dfd853d88e818e8",
+                    "getPasswordData": false,
+                    "instanceType": "t2.micro",
+                    "sourceDestCheck": true,
+                    "tags": {
+                        "Name": "myEC2Instance"
+                    },
+                    "tagsAll": {
+                        "Name": "myEC2Instance"
+                    },
+                    "userDataReplaceOnChange": false
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000,\"update\":600000000000},\"schema_version\":\"1\"}",
+                    "ami": "ami-04dfd853d88e818e8",
+                    "arn": "arn:aws:ec2:eu-central-1:532199187081:instance/i-09fd522b2ba9a617e",
+                    "associatePublicIpAddress": true,
+                    "availabilityZone": "eu-central-1a",
+                    "capacityReservationSpecification": {
+                        "capacityReservationPreference": "open",
+                        "capacityReservationTarget": null
+                    },
+                    "cpuCoreCount": 1,
+                    "cpuOptions": {
+                        "amdSevSnp": "",
+                        "coreCount": 1,
+                        "threadsPerCore": 1
+                    },
+                    "cpuThreadsPerCore": 1,
+                    "creditSpecification": {
+                        "cpuCredits": "standard"
+                    },
+                    "disableApiStop": false,
+                    "disableApiTermination": false,
+                    "ebsBlockDevices": [],
+                    "ebsOptimized": false,
+                    "enclaveOptions": {
+                        "enabled": false
+                    },
+                    "ephemeralBlockDevices": [],
+                    "getPasswordData": false,
+                    "hibernation": false,
+                    "hostId": "",
+                    "iamInstanceProfile": "",
+                    "id": "i-09fd522b2ba9a617e",
+                    "instanceInitiatedShutdownBehavior": "stop",
+                    "instanceLifecycle": "",
+                    "instanceMarketOptions": null,
+                    "instanceState": "running",
+                    "instanceType": "t2.micro",
+                    "ipv6AddressCount": 0,
+                    "ipv6Addresses": [],
+                    "keyName": "",
+                    "launchTemplate": null,
+                    "maintenanceOptions": {
+                        "autoRecovery": "default"
+                    },
+                    "metadataOptions": {
+                        "httpEndpoint": "enabled",
+                        "httpProtocolIpv6": "disabled",
+                        "httpPutResponseHopLimit": 1,
+                        "httpTokens": "optional",
+                        "instanceMetadataTags": "disabled"
+                    },
+                    "monitoring": false,
+                    "networkInterfaces": [],
+                    "outpostArn": "",
+                    "passwordData": "",
+                    "placementGroup": "",
+                    "placementPartitionNumber": 0,
+                    "primaryNetworkInterfaceId": "eni-0bf52b9ede295887f",
+                    "privateDns": "ip-172-31-27-116.eu-central-1.compute.internal",
+                    "privateDnsNameOptions": {
+                        "enableResourceNameDnsARecord": false,
+                        "enableResourceNameDnsAaaaRecord": false,
+                        "hostnameType": "ip-name"
+                    },
+                    "privateIp": "172.31.27.116",
+                    "publicDns": "ec2-3-123-253-73.eu-central-1.compute.amazonaws.com",
+                    "publicIp": "3.123.253.73",
+                    "rootBlockDevice": {
+                        "deleteOnTermination": true,
+                        "deviceName": "/dev/sda1",
+                        "encrypted": false,
+                        "iops": 100,
+                        "kmsKeyId": "",
+                        "tags": {},
+                        "throughput": 0,
+                        "volumeId": "vol-09416217452292e46",
+                        "volumeSize": 8,
+                        "volumeType": "gp2"
+                    },
+                    "secondaryPrivateIps": [],
+                    "securityGroups": [
+                        "default"
+                    ],
+                    "sourceDestCheck": true,
+                    "spotInstanceRequestId": "",
+                    "subnetId": "subnet-7ce26116",
+                    "tags": {
+                        "Name": "myEC2Instance"
+                    },
+                    "tagsAll": {
+                        "Name": "myEC2Instance"
+                    },
+                    "tenancy": "default",
+                    "userDataReplaceOnChange": false,
+                    "vpcSecurityGroupIds": [
+                        "sg-42f33f3a"
+                    ]
+                },
+                "parent": "urn:pulumi:plmsttbcknd::plmsttbcknd::pulumi:pulumi:Stack::plmsttbcknd-plmsttbcknd",
+                "provider": "urn:pulumi:plmsttbcknd::plmsttbcknd::pulumi:providers:aws::default_6_24_1::eb3b06f2-68ef-4743-8c45-2aea4faff391",
+                "propertyDependencies": {
+                    "ami": null,
+                    "instanceType": null,
+                    "tags": null
+                },
+                "created": "2024-03-04T21:04:09.618167Z",
+                "modified": "2024-03-04T21:04:09.618167Z",
+                "sourcePosition": "project:///index.ts#3,16"
+            }
+        ]
+    }
+}
